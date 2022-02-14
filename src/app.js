@@ -35,10 +35,10 @@ window.onload = function() {
   matrix[3][0] = 1;
   matrix[1][1] = 1;
   matrix[1][5] = 1;
-  matrix[4][2] = 1;
+  matrix[2][4] = 1;
   matrix[0][3] = 1;
   matrix[3][3] = 1;
-  matrix[2][4] = 1;
+  matrix[4][2] = 1;
   matrix[4][5] = 1;
 
   // matrix90 = matrix[0].map((val, index) => matrix.map(row => row[index]).reverse())
