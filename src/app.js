@@ -24,7 +24,7 @@ window.onload = function() {
   let matrix;
   let array = Array(sideSize).fill();
   const CreateMatrix = () => {
-    matrix = array.map(function(x) {
+    matrix = array.map(x => {
       return Array(sideSize).fill(0);
     });
     return matrix;
@@ -58,3 +58,12 @@ window.onload = function() {
   // const decryptedMessage = decrypt(encriptedMessage, gridPosBase);
   // console.log(decryptedMessage);
 };
+
+//MIRAR MAS ADELANTE PARA REFACTORIZAR EL CODIGO.
+// Posibles opciones a la funcion de añadir1 => con esto sacamos un listado de todos los valores de gridPosBase, puede que podamos trabajar con esto.
+
+// for(i = 0; i < gridPosBase.length; i++){
+//   for(v of gridPosBase[i]){
+//     console.log(v-1)
+//   }
+//   }
