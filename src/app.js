@@ -31,21 +31,30 @@ window.onload = function() {
   };
   CreateMatrix();
 
-  matrix[0][0] = 1;
-  matrix[3][0] = 1;
-  matrix[1][1] = 1;
-  matrix[1][5] = 1;
-  matrix[2][4] = 1;
-  matrix[0][3] = 1;
-  matrix[3][3] = 1;
-  matrix[4][2] = 1;
-  matrix[4][5] = 1;
+  const añadir1 = () => {
+    matrix[0][0] = 1;
+    matrix[3][0] = 1;
+    matrix[1][1] = 1;
+    matrix[5][1] = 1;
+    matrix[4][2] = 1;
+    matrix[0][3] = 1;
+    matrix[3][3] = 1;
+    matrix[2][4] = 1;
+    matrix[5][4] = 1;
+    return matrix;
+  };
+  let matrix0 = añadir1();
 
-  // matrix90 = matrix[0].map((val, index) => matrix.map(row => row[index]).reverse())
-  let matrix180 = matrix.reverse();
-  // matrix270 = matrix180[0].map((val, index) => matrix.map(row => row[index]).reverse())
+  let matrix90 = matrix0[0].map((val, index) =>
+    matrix.map(row => row[index]).reverse()
+  );
+  let matrix180 = matrix0.reverse();
+  let matrix270 = matrix90.reverse();
+  console.log(matrix0);
+  console.log(matrix90);
+  console.log(matrix180);
+  console.log(matrix270);
 
-  console.log(matrix);
   // const decryptedMessage = decrypt(encriptedMessage, gridPosBase);
   // console.log(decryptedMessage);
 };
